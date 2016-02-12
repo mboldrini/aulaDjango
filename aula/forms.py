@@ -3,6 +3,7 @@ from django import forms
 from aula.models import SignUp
 
 # sem usar um modelo, e formado da forma explicita o form
+#cria o formulario de contato, sem a necessidade de manter registro no DB
 class ContactForm(forms.Form):
     full_name = forms.CharField(required=False)
     email = forms.EmailField()
@@ -15,6 +16,3 @@ class SignUpForm(forms.ModelForm):
         model = SignUp
         fields = ['email', 'full_name']
 
-    #def clean_email(self):
-        #email = self.cleaned_data.get('email')
-        #return email
