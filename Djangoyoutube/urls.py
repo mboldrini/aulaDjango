@@ -18,7 +18,9 @@ from django.contrib import admin
 
 urlpatterns = [
 
-    url(r'^$', 'aula.views.home' ),
+    url(r'^$', 'aula.views.home', name='home' ),
+
+    url(r'^contact/$', 'aula.views.contact', name='contact' ),
 
 
     url(r'^admin/', admin.site.urls),
