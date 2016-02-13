@@ -1,6 +1,6 @@
 from django import forms
 
-from aula.models import SignUp
+from aula.models import SignUp, MeuModel
 
 # sem usar um modelo, e formado da forma explicita o form
 #cria o formulario de contato, sem a necessidade de manter registro no DB
@@ -16,3 +16,9 @@ class SignUpForm(forms.ModelForm):
         model = SignUp
         fields = ['email', 'full_name']
 
+
+
+class MeuModelForm(forms.ModelForm):
+    class Meta:
+        model = MeuModel
+        fields = ['nome', 'email']
