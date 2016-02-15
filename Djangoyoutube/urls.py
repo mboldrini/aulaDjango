@@ -15,13 +15,25 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+#pra nao usar string ali em baixo e dar aviso de erro
+import aula.views
+
+#parte das urls
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
 
-    url(r'^$', 'aula.views.home', name='home' ),
+    url(r'^$', aula.views.home ),
 
-    url(r'^contact/$', 'aula.views.contact', name='contact' ),
+    url(r'^contact/$', aula.views.contact ),
 
 
     url(r'^admin/', admin.site.urls),
+
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL)
+    urlpatterns += static(settings.MEDIA_URL)
+

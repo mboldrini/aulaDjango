@@ -1,0 +1,8 @@
+.cabecalho{
+	height: 150px;
+	background-color: gray;
+}
+.corpo{
+	border: 1px solid #f00;
+	overflow: hidden;
+}
