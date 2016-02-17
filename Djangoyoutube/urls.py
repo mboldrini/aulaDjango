@@ -18,18 +18,22 @@ from django.contrib import admin
 #pra nao usar string ali em baixo e dar aviso de erro
 import aula.views
 
+
+
 #parte das urls
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.conf.urls import include
+
 urlpatterns = [
 
     url(r'^$', aula.views.home, name="home" ),
-
     url(r'^contact/$', aula.views.contact, name="contat" ),
-
-
     url(r'^admin/', admin.site.urls),
+
+    url(r'^accounts/', include('registration.backends.default.urls')),
+
 
 ]
 

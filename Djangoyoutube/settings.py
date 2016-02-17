@@ -25,6 +25,12 @@ SECRET_KEY = 'aq1@!f6$b(0uzsb8cj#lio#xjbn^o81g-(v+93+db5&lfx^fg^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
+#REGISTER
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+#REGISTER
+
 ALLOWED_HOSTS = []
 
 
@@ -48,7 +54,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'aula',
+
+    #form bonitim
     'crispy_forms',
+
+    'registration',
+
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -80,6 +91,8 @@ TEMPLATES = [
         },
     },
 ]
+
+
 
 WSGI_APPLICATION = 'Djangoyoutube.wsgi.application'
 
@@ -117,7 +130,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'pt-br'
+LANGUAGE_CODE = 'pt_BR'
 
 TIME_ZONE = 'UTC'
 
@@ -147,7 +160,9 @@ MEDIA_URL = '/media/'
 
 
 #Crispy qual bootstrap usar
-
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+LOGIN_REDIRECT_URL = '/'
