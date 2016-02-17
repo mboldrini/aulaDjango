@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'aula',
+    'crispy_forms',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -145,6 +146,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 MEDIA_URL = '/media/'
 
 
+#Crispy qual bootstrap usar
 
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 

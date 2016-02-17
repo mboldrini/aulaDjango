@@ -1,18 +1,23 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact</title>
-</head>
-<body>
+{% include 'header.html' %}
+{% include 'navbar.html' %}
 
-<form method='POST' action=''>{% csrf_token %}
+{% load crispy_forms_tags %}
 
-    {{ form.as_p }}
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
 
-    <input type="submit" value="Submit" />
+        <form method='POST' action=''>{% csrf_token %}
 
-</form>
+            {{ form|crispy }}
+
+            <input type="submit" value="Enviar" class="btn btn-primary" />
+
+        </form>
+
+    </div>
+</div>
+
+
 
 
 </body>

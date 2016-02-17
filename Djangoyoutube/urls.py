@@ -24,9 +24,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
 
-    url(r'^$', aula.views.home ),
+    url(r'^$', aula.views.home, name="home" ),
 
-    url(r'^contact/$', aula.views.contact ),
+    url(r'^contact/$', aula.views.contact, name="contat" ),
 
 
     url(r'^admin/', admin.site.urls),

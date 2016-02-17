@@ -1,82 +1,39 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="description" content="">
-  <meta name="author" content="">
+{% include 'header.html' %}
+{% include 'navbar.html' %}
 
-  <link rel="icon" href="http://getbootstrap.com/favicon.ico">
-
-	<title>Pagina Principal</title>
-    {% load staticfiles %}
-	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-	<link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-  <script src="{% static 'js/jquery.min.js' %}"></script>
-  <script src="{% static 'js/bootstrap.min.js' %}"></script>
-
-</head>
-<body>
-
-<header>
-  <div class="row">
-    <div class="col-md-12 cabecalho">
-      <h1 class="col-md-offset-2">
-        Meu Logo
-      </h1>
-    </div>
-  </div>
-</header>
-
-
-
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid col-md-8 col-md-offset-2">
-
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Menu</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand hidden-lg" href="#">MeuSite</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-      <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Login</a></li>
-      </ul>
-
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+{% load crispy_forms_tags %}
 
 <section>
-  <div class="row">
-    <div class="corpo col-md-8 col-md-offset-2">
+    <div class="row col-md-8 col-md-offset-2">
 
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium magnam nemo, sit accusantium culpa ullam aperiam facilis similique sequi! Quia molestias dolores doloremque, nulla sed itaque quisquam cum dolorum sunt.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aliquid recusandae voluptates nam, facilis, sapiente laboriosam ipsam asperiores dolores molestias ducimus eligendi alias perspiciatis quis praesentium, cupiditate nisi consequatur assumenda.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium magnam nemo, sit accusantium culpa ullam aperiam facilis similique sequi! Quia molestias dolores doloremque, nulla sed itaque quisquam cum dolorum sunt.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aliquid recusandae voluptates nam, facilis, sapiente laboriosam ipsam asperiores dolores molestias ducimus eligendi alias perspiciatis quis praesentium, cupiditate nisi consequatur assumenda.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum rerum ad laudantium eaque, maiores recusandae inventore in molestiae corporis corrupti. Odit magni dolor repellat optio culpa officiis voluptates voluptatem quos.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, neque? Provident aperiam esse, magni in asperiores debitis libero harum nam ea! Voluptate laboriosam aut quis asperiores eaque inventore, assumenda sit!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique corrupti, voluptates? Laudantium consectetur tempora rerum sapiente voluptate eius obcaecati voluptates molestiae fugiat, animi corporis dignissimos quae est autem qui ratione.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ipsam praesentium temporibus cumque nesciunt quis sequi eius, eos veniam quae, obcaecati, velit corporis similique asperiores aliquam dolore natus omnis explicabo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ea voluptates distinctio modi voluptatum ullam consequuntur quisquam explicabo tempore, nisi repudiandae, magni repellendus, necessitatibus error officiis assumenda debitis voluptatibus obcaecati.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium facilis illum architecto amet maxime distinctio voluptas, molestiae accusamus ipsum possimus alias ea ex perferendis assumenda eligendi! Excepturi officia cupiditate praesentium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati soluta sit eligendi, nulla rem. Laudantium voluptatem iste, labore veniam nostrum eius. Et officia, soluta. Nulla nesciunt esse eius temporibus, reprehenderit!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum rerum ad laudantium eaque, maiores recusandae inventore in molestiae corporis corrupti. Odit magni dolor repellat optio culpa officiis voluptates voluptatem quos.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, neque? Provident aperiam esse, magni in asperiores debitis libero harum nam ea! Voluptate laboriosam aut quis asperiores eaque inventore, assumenda sit!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique corrupti, voluptates? Laudantium consectetur tempora rerum sapiente voluptate eius obcaecati voluptates molestiae fugiat, animi corporis dignissimos quae est autem qui ratione.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ipsam praesentium temporibus cumque nesciunt quis sequi eius, eos veniam quae, obcaecati, velit corporis similique asperiores aliquam dolore natus omnis explicabo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ea voluptates distinctio modi voluptatum ullam consequuntur quisquam explicabo tempore, nisi repudiandae, magni repellendus, necessitatibus error officiis assumenda debitis voluptatibus obcaecati.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium facilis illum architecto amet maxime distinctio voluptas, molestiae accusamus ipsum possimus alias ea ex perferendis assumenda eligendi! Excepturi officia cupiditate praesentium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati soluta sit eligendi, nulla rem. Laudantium voluptatem iste, labore veniam nostrum eius. Et officia, soluta. Nulla nesciunt esse eius temporibus, reprehenderit!
+        <div class="col-md-4  ">
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quae, voluptate? Amet asperiores
+            autem cupiditate dignissimos dolores illo incidunt nobis pariatur quia reiciendis? Autem deleniti modi non obcaecati placeat reprehenderit
+            </p>
+        </div>
+
+        <div class="col-md-4  ">
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quae, voluptate? Amet asperiores
+            autem cupiditate dignissimos dolores illo incidunt nobis pariatur quia reiciendis? Autem deleniti modi non obcaecati placeat reprehenderit.
+            </p>
+        </div>
+
+        <div class="col-md-4 ">
+
+            <form method='POST' action="">{% csrf_token %}
+                {{ form|crispy }}
+                <input type="submit" value="Sign Up" class="btn btn-primary"/>
+            </form>
+
+        </div>
 
     </div>
-  </div>
+
+
 </section>
+
 
 
 </body>

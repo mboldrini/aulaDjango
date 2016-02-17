@@ -12,7 +12,7 @@ from aula.forms import SignUpForm, ContactForm
 
 #cria a view Home
 def home(request):
-    title = "Meu Titulo"
+    title = "Página Principal"
 
     # o SignUpForm veio do SignUpForm que esta no arquivo
     #forms
@@ -40,7 +40,7 @@ def home(request):
         # se o form estiver tudo certo, a variavel TITLE muda o valor
         # e ela é exibida como "Thank you"
         context = {
-            "title": "Thank you"
+            "title": "Vlwww!"
         }
 
     return render(request, "home.html", context)
@@ -81,6 +81,7 @@ def contact(request):
     #variavel que envia pro html uma outra variavel que e os forms
     context = {
         "form": form,
+        "title": "Contato",
     }
 
     return render(request, "forms.html", context)
